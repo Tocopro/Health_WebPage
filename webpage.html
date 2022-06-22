@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HEALTH INFORMATION</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<section class="section-1">
+    <header>
+        <a href="#"><img src="doctor_app.jpg" width="350" height="300"
+                       class="logo"></a>
+        <ul>
+            <li><a href="#">HOME </a></li>
+            <li><a href="#">PRODUCTS </a> </li>
+            <li><a href="#">CONTACT </a></li>
+        </ul>
+    </header>
+    <div class="content">
+        <div class="text-box">
+            <h2>Health Information<br><span>At your fingertips</span></h2>
+            <p>
+                Health Information Apps accessible to health care providers
+                and Patients
+            </p>
+            <a href="#">View All Products</a>
+        </div>
+        <div class="image">
+            <img src="nurse.jpg"  class="doctor" width="200" height="200" class="App">
+        </div>
+    </div>
+    <ul class="thumb">
+        <li><img src="woman_laptop.jpg" onclick="img_slider('woman_laptop.jpg');
+            change_color('#C4A484')" width="200" height="200"></li>
+        <li><img src="floating_iphone.jpg" onclick="img_slider('floating_iphone.jpg');
+            change_color('#33c1ff')" width="200" height="200"></li>
+        <li><img src="desktop_laptop.jpg" onclick="img_slider('desktop_laptop.jpg');
+            change_color('#fffff0')" width="200" height="200"></li>
+    </ul>
+    <ul class="social">
+        <li><a href="#"><img src="facebook.jpg" width="200" height="100"></a> </li>
+        <li><a href="#"><img src="twitter.jpg" width="200" height="100"></a> </li>
+        <li><a href="#"><img src="instagram.jpg" width="100" height="100"></a> </li>
+    </ul>
+</section>
+<script type="text/javascript">
+    function img_slider(anything)
+    {
+        document.querySelector('.doctor').src = anything;
+    }
+    function change_color(color)
+    {
+        let section = document.querySelector('.section-1');
+        section.style.background = color;
+    }
+</script>
+</body>
+</html>
+
+CSS 
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+section
+{
+    position: relative;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    transition: 0.5s;
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.logo
+{
+    position: relative;
+    max-width: 80px;
+}
+header ul
+{
+    position: relative;
+    display: flex;
+}
+header ul li
+{
+    list-style: none;
+
+}
+header ul li a
+{
+    display: inline-block;
+    color: darkorchid;
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+}
+.content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .text-box
+{
+    position: relative;
+    max-width: 600px;
+}
+.content .text-box h2
+{
+    color: chartreuse;
+    font-size: 2em;
+    line-height: 1.5em;
+    font-weight: 200;
+    text-transform: uppercase;
+}
+.content .text-box h2 span
+{
+    font-size: 2em;
+}
+.content .text-box p
+{
+    color: darkorchid;
+}
+.content .text-box a
+{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: coral;
+    color: darkseagreen;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.content .image
+{
+    width: 1000px;
+    display: flex;
+    padding-right: 50px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+.content .image img
+{
+    max-width: 460px;
+}
+.thumb
+{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li
+{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thumb li:hover
+{
+    transform: translateY(-15px);
+}
+.thumb li img
+{
+    max-width: 400px;
+}
+.social
+{
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: white;
+}
+.social li
+{
+    list-style: none;
+}
+.social li a
+{
+    display: inline-block;
+    filter: invert(1);
+    margin: 5px 0;
+    transform: scale(0.6);
+}
